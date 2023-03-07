@@ -1,21 +1,24 @@
 import React from "react";
 import GlobalStyle from './GlobalStyle';
 import Turn from './components/Turn';
-// import Style from 'styled-components';
+import Board from './components/Board';
+import Styled from 'styled-components';
 
+const Header = Styled.div`
+  padding: 16px;
+`
 
-class App extends React.Component {
-  render () {
+function App () {
       return (
-      <div>
-        <GlobalStyle />
-        <h1>Tic Toc Toe</h1>
         <div>
-          <Turn />
+          <GlobalStyle />
+          <Header>
+            <h1>Tic Toc Toe</h1>
+            <Turn />
+          </Header>
+          <Board />
         </div>
-      </div>
     );
-  }
 }
 
 
