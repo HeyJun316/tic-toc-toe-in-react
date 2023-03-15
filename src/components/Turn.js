@@ -2,15 +2,22 @@ import React from 'react';
 import Styled from 'styled-components';
 
 const DivStyle = Styled.div`
- display: flex;
- justify-content: center;
-`
+  display: flex;
+  justify-content: center;
+`;
 
-function Turn() {
+const DivTurnItem = Styled.div`
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  padding: 8px;
+`;
+
+function Turn({player}) {
     return (
       <DivStyle>
-          <div class="turn-item circle active">○</div>
-          <div class="turn-item cross">×</div>
+          <DivTurnItem>{player.circle}</DivTurnItem>
+          <DivTurnItem>{player.cross}</DivTurnItem>
       </DivStyle>
       );
   }
